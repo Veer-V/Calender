@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December 2024 Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f8ff; 
+        }
+        .calendar-container{
+            width: 90;
+            max-width: 700px;
+            background-color: #e6f2ff;
+            padding: px;
+            border-radius: 15px;
+            box-shadow: 0 4px,10px,rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .calendar-header{
+            padding-top: 20px;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #0073e6;
+            font-weight: bold;
+        }
+        .calendar-grid{
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            gap: 10px;
+        }
+        .day-name,.day-number{
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 1,2em;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+           
+        }
+        .day-name{
+            background-color: #004080;
+        }
+        .day-number{
+            background-color: #66b3ff;
+            transition: transform 0.2s;
+            background-color: 0.2s;
+        }
+        .empty{
+            background-color: transparent;
+            cursor: default;
+
+        }
+        #message{
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: 004080;
+        }
+
+
+            </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">December 2024</div>
+        <div class="calendar-grid">
+            <!-- Days of the week -->
+            <div class="day-name">Sunday</div>
+            <div class="day-name">Monday</div>
+            <div class="day-name">Tuesday</div>
+            <div class="day-name">Wednesday</div>
+            <div class="day-name">Thursday</div>
+            <div class="day-name">Friday</div>
+            <div class="day-name">Saturday</div>
+
+            <!-- Empty cells for days before December Start -->
+             <!-- <div class="Empty"></div>
+             <div class="Empty"></div>
+             <div class="Empty"></div>
+             <div class="Empty"></div> -->
+
+             <!-- Days of the December 2024 -->
+              <div class="day-number" onclick="showEvent(1)">1</div>
+              <div class="day-number" onclick="showEvent(2)">2</div>
+              <div class="day-number" onclick="showEvent(3)">3</div>
+              <div class="day-number" onclick="showEvent(4)">4</div>
+              <div class="day-number" onclick="showEvent(5)">5</div>
+              <div class="day-number" onclick="showEvent(6)">6</div>
+              <div class="day-number" onclick="showEvent(7)">7</div>
+              <div class="day-number" onclick="showEvent(8)">8</div>
+              <div class="day-number" onclick="showEvent(9)">9</div>
+              <div class="day-number" onclick="showEvent(11)">10</div>
+              <div class="day-number" onclick="showEvent(11)">11</div>
+              <div class="day-number" onclick="showEvent(12)">12</div>
+              <div class="day-number" onclick="showEvent(13)">13</div>
+              <div class="day-number" onclick="showEvent(14)">14</div>
+              <div class="day-number" onclick="showEvent(15)">15</div>
+              <div class="day-number" onclick="showEvent(16)">16</div>
+              <div class="day-number" onclick="showEvent(17)">17</div>
+              <div class="day-number" onclick="showEvent(18)">18</div>
+              <div class="day-number" onclick="showEvent(19)">19</div>
+              <div class="day-number" onclick="showEvent(20)">20</div>
+              <div class="day-number" onclick="showEvent(21)">21</div>
+              <div class="day-number" onclick="showEvent(22)">22</div>
+              <div class="day-number" onclick="showEvent(23)">23</div>
+              <div class="day-number" onclick="showEvent(24)">24</div>
+              <div class="day-number" onclick="showEvent(25)">25</div>
+              <div class="day-number" onclick="showEvent(26)">26</div>
+              <div class="day-number" onclick="showEvent(27)">27</div>
+              <div class="day-number" onclick="showEvent(28)">28</div>
+              <div class="day-number" onclick="showEvent(29)">29</div>
+              <div class="day-number" onclick="showEvent(30)">30</div>
+              <div class="day-number" onclick="showEvent(31)">31</div>   
+        </div>
+        <div id="message"></div>
+    </div>
+    <script>
+        function showEvent(day){
+            const events = {
+                25:"Christmas Day - lets celebrate the joy of the season!!!!"
+            };
+            const message = document.getElementById("message"); 
+            message.textContent = events[day]||`No events or festivals on December ${day}, 2024.`;
+        }
+    </script>
+</body>
+</html>
